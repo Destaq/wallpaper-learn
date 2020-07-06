@@ -109,5 +109,7 @@ Once you have your images set up, all you need to do is set them to cycle as you
 
 #### Mac
 Navigate to your `System Preferences -> Desktop & Screen Saver -> Desktop` and click the + button at the bottom left to add an images folder (your images folder in the root directory of this program). Set `change picture` to True, adjust your cycling time, and choose whether or not to enable random order.
+![Mac Example](/content/mac.png)
 
 #### Windows
+![Windows Example](/content/windows.png)
