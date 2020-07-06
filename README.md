@@ -1,6 +1,6 @@
 # wallpaper-learn
 
-With wallpaper learn, you can effortlessly learn new phrases, countries, or really anything you want... straight from your wallpaper.
+With `wallpaper-learn`, you can effortlessly learn new phrases, countries, or really anything you want... straight from your wallpaper.
 
 Curated phrases and educational material are available for a wide range of subjects and languages, and all you have to do is create a new folder and click a few buttons in settings before being able to have an educational background for your device.
 
@@ -15,18 +15,13 @@ This is a list of all of the topics, subtopics, and levels available to set as y
 -   Spanish
     - 100-top-words
 
-### History
-
--   Ancient
--   Modern
 
 ### Geography
 
 -   Countries
-    - Europe
--   States
+-   States of the USA
 
-... and many more to come! It's very simple to contribute by opening a PR with your files, and a few minutes finding and parsing the right URL could help more than you may expect.
+... and many more to come! It's very simple to contribute by opening a PR with your files, and a few minutes of finding and parsing the right URL could help more people than you may expect.
 
 ## Usage
 
@@ -111,3 +106,8 @@ Complete examples can be found by looking at CSV files in the repository or you 
 
 ### Setting Cycling Wallpaper
 Once you have your images set up, all you need to do is set them to cycle as your wallpaper in your settings. Below are some images demonstrating how you can do so in various operating systems.
+
+#### Mac
+Navigate to your `System Preferences -> Desktop & Screen Saver -> Desktop` and click the + button at the bottom left to add an images folder (your images folder in the root directory of this program). Set `change picture` to True, adjust your cycling time, and choose whether or not to enable random order.
+
+#### Windows
