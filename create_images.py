@@ -63,33 +63,86 @@ def form_images(topic, subtopic, level=None):
         )  # reopen each time to prevent text from spilling over
         draw = ImageDraw.Draw(default)
 
-        w, h = draw.textsize(
-            f"{data[i][0]} - {data[i][1]}", font=values
-        )  # find size of text if it would be drawn; used for centering
+        if len(data) == 4: # advanced CSV, key + key2 + value + category
+            w, h = draw.textsize(
+                f"{data[i][0]} - {data[i][1]}", font=values
+            )  # find size of text if it would be drawn; used for centering
 
-        # 'draw' text to sample image
-        draw.text(
-            ((width - w) / 2, ((height - h) / 2) - 100),
-            f"{data[i][0]} - {data[i][1]}",
-            (0, 0, 0),
-            font=values,
-        )  # characters + pinyin
+            # 'draw' text to sample image
+            draw.text(
+                ((width - w) / 2, ((height - h) / 2) - 100),
+                f"{data[i][0]} - {data[i][1]}",
+                (0, 0, 0),
+                font=values,
+            )  # characters + pinyin
 
-        w, h = draw.textsize(f"Definition: {data[i][2]}", font=small_definition)
-        draw.text(
-            ((width - w) / 2, ((height - h) / 2) + 50),
-            f"Definition: {data[i][2]}",
-            (0, 0, 0),
-            font=small_definition,
-        )  # english definition
+            w, h = draw.textsize(f"{data[1][2]}: {data[i][2]}", font=small_definition)
+            draw.text(
+                ((width - w) / 2, ((height - h) / 2) + 50),
+                f"{data[1][2]}: {data[i][2]}",
+                (0, 0, 0),
+                font=small_definition,
+            )  # english definition
 
-        w, other_h = draw.textsize(f"Category: {data[i][3]}", font=small_definition)
-        draw.text(
-            ((width - w) / 2, ((height - other_h) / 2) + 60 + h),
-            f"Category: {data[i][3]}",
-            (0, 0, 0),
-            font=small_definition,
-        )  # word category
+            w, other_h = draw.textsize(f"{data[1][3]}: {data[i][3]}", font=small_definition)
+            draw.text(
+                ((width - w) / 2, ((height - other_h) / 2) + 60 + h),
+                f"{data[1][3]}: {data[i][3]}",
+                (0, 0, 0),
+                font=small_definition,
+            )  # word category
+
+
+        elif len(data) == 3: # intermediate CSV, key + value + category
+            w, h = draw.textsize(
+                {data[i][0]}, font=values
+            )  # find size of text if it would be drawn; used for centering
+
+            # 'draw' text to sample image
+            draw.text(
+                ((width - w) / 2, ((height - h) / 2) - 100),
+                {data[i][0]},
+                (0, 0, 0),
+                font=values,
+            )  # characters + pinyin
+
+            w, h = draw.textsize(f"{data[1][1]}: {data[i][1]}", font=small_definition)
+            draw.text(
+                ((width - w) / 2, ((height - h) / 2) + 50),
+                f"{data[1][1]}: {data[i][1]}",
+                (0, 0, 0),
+                font=small_definition,
+            )  # english definition
+
+            w, other_h = draw.textsize(f"{data[1][2]}: {data[i][2]}", font=small_definition)
+            draw.text(
+                ((width - w) / 2, ((height - other_h) / 2) + 60 + h),
+                f"{data[1][2]}: {data[i][2]}",
+                (0, 0, 0),
+                font=small_definition,
+            )  # word category
+
+        elif len(data) == 2: # simple CSV, key + value
+            w, h = draw.textsize(
+                {data[i][0]}, font=values
+            )  # find size of text if it would be drawn; used for centering
+
+            # 'draw' text to sample image
+            draw.text(
+                ((width - w) / 2, ((height - h) / 2) - 100),
+                {data[i][0]},
+                (0, 0, 0),
+                font=values,
+            )  # characters + pinyin
+
+            w, h = draw.textsize(f"{data[1][1]}: {data[i][1]}", font=small_definition)
+            draw.text(
+                ((width - w) / 2, ((height - h) / 2) + 50),
+                f"{data[1][1]}: {data[i][1]}",
+                (0, 0, 0),
+                font=small_definition,
+            )  # definition
+
 
         # save image to disk; based on topic + subtopic + option level
         if level is not None:
