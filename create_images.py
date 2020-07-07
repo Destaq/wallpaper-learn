@@ -5,10 +5,13 @@ import font_dictionary # different fonts for different types of csv files, to su
 
 
 def empty_directory():
-    """clear directory of any previous images"""
-    filelist = [f for f in os.listdir("images")]
-    for f in filelist:
-        os.remove(f"images/{f}")
+    """clear directory of any previous images or create directory"""
+    try:
+        filelist = [f for f in os.listdir("images")]
+        for f in filelist:
+            os.remove(f"images/{f}")
+    except:
+        os.mkdir('images')
 
 
 def form_images(topic, subtopic, level=None):
