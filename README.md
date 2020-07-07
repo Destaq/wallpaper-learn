@@ -8,24 +8,26 @@ Curated phrases and educational material are available for a wide range of subje
 
 This is a list of all of the topics, subtopics, and levels available to set as your wallpaper. If you see something missing here, just add your own, contributing takes only a few minutes!
 
-### Languages
+### languages
 
--   Chinese
+-   chinese
     - HSK-1
--   Spanish
-    - 100-top-words
+-   spanish
+    - top100
 
 
-### Geography
+### geography
 
--   Countries
--   States of the USA
+-   countries
+-   states
 
 ... and many more to come! It's very simple to contribute by opening a PR with your files, and a few minutes of finding and parsing the right URL could help more people than you may expect.
 
 ## Usage
 
-`wallpaper-learn` can be run straight from the terminal, assuming that you have navigated to the root directory that holds `set_wallpaper.py`. From there, it takes a few simple arguments in order to find out which topic + subtopic you are interested in, and then creates an `images` folder which houses all of the images.
+`wallpaper-learn` can be run straight from the terminal, assuming that you have navigated to the root directory that holds `set_wallpaper.py`. From there, it takes a few simple arguments in order to find out which topic + subtopic + level you are interested in, and then creates an `images` folder which houses all of the images.
+
+**`wallpaper-learn` also supports having multiple arguments (see bottom of this section for details).**
 
 You can run this by running the command `python3 set_wallpaper.py` and any commands you'd like from the terminal. Arguments passed in are case-insensitive. The following commands are available:
 
@@ -37,7 +39,18 @@ Likewise, you can also view possible arguments by running `python3 set_wallpaper
 
 Once the command has finished running, all that you have to do is navigate to your settings/System Preferences and set up a cycling wallpaper background.
 
-*Example: `python3 set_wallpaper.py -t languages -s chinese -l HSK-1`*
+*Simple Example: `python3 set_wallpaper.py -t languages -s chinese -l HSK-1`*
+
+*Advanced Example (multiple arguments):* 
+```
+python3 set_wallpaper.py -t languages -s chinese -l HSK-1 \
+-t languages -s spanish -l top100 \
+-t geography -s countries
+```
+In essence, for the advanced examples all you have to do is list each of the paths to the 'content' you want to go to individually. For example, these paths are `languages -> chinese -> HSK-1`, `languages -> spanish -> top 100` and `geography -> states`. Note how for the geography there is *not* a `--level` argument; that is because there is no level below `states` and there is a CSV file in `geography -> states`.
+
+You can also run it all as a one-line argument, but to keep it clear for yourself the multi-line one above is recommended.
+`python3 set_wallpaper.py -t languages -s chinese -l HSK-1 -t languages -s spanish -l top100 -t geography -s countries`.
 
 ## Requirements
 
@@ -109,7 +122,10 @@ Once you have your images set up, all you need to do is set them to cycle as you
 
 #### Mac
 Navigate to your `System Preferences -> Desktop & Screen Saver -> Desktop` and click the + button at the bottom left to add an images folder (your images folder in the root directory of this program). Set `change picture` to True, adjust your cycling time, and choose whether or not to enable random order.
+
+**Please note**: sometimes the Mac system may fail to register all the images in your directory after you have run the command. If so, go back to the settings, select one image in the `images` folder, click it, and then click back out and check randomized cycling images. That should fix it.
 ![Mac Example](/content/mac.png)
 
 #### Windows
+Similar procedure to Mac.
 ![Windows Example](/content/windows.png)

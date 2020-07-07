@@ -14,7 +14,6 @@ def empty_directory():
 
 def form_images(topic, subtopic, level=None):
     """populate image folder with wallpaper-appropiate images"""
-    empty_directory()
 
     # create array to hold 'cards' for wallpaper
     data = []
@@ -35,8 +34,12 @@ def form_images(topic, subtopic, level=None):
                 extension_ending = listing[i][-3:]
                 break
 
-        default = Image.open(f"{topic}/{subtopic}/{default_image}")
-        width, height = default.size  # get dimensions for centering text
+        try:
+            default = Image.open(f"{topic}/{subtopic}/{default_image}")
+            width, height = default.size  # get dimensions for centering text
+        except:
+            default = Image.open(f"{topic}/{default_image}")
+            width, height = default.size  # get dimensions for centering text 
 
         try:
             with open(f"{topic}/{subtopic}/{level}/{level.lower()}.csv") as vocab:
@@ -63,8 +66,6 @@ def form_images(topic, subtopic, level=None):
                 extension_ending = listing[i][-3:]
                 break
 
-        default = Image.open(f"{topic}/{default_image}")
-        width, height = default.size  # get dimensions for centering text
 
         try:
             with open(f"{topic}/{subtopic}/{level}/{level.lower()}.csv") as vocab:
@@ -107,7 +108,7 @@ def form_images(topic, subtopic, level=None):
 
     for i in range(2, len(data)):
         # let user know the progress
-        print(f"Writing image {i} of {len(data)-1}.\r", end="")
+        print(f"Writing image {i} of {len(data)-1} in this set.\r", end="")
         # create images for vocabulary
         try:
             default = Image.open(
@@ -115,6 +116,8 @@ def form_images(topic, subtopic, level=None):
             )  # reopen each time to prevent text from spilling over
         except:
             default = Image.open(f"{topic}/{default_image}")
+
+        width, height = default.size  # get dimensions for centering text
         draw = ImageDraw.Draw(default)
 
         if len(data[1]) == 4:  # advanced CSV, key + key2 + value + category
