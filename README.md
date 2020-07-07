@@ -82,7 +82,7 @@ This is the format for the `CSV` files, which are **4, 3 or 2 columns by _n_ row
 -   _third row and beyond_: this is when you start filling up your CSV file with the actual content. Below each of your columns, create a row with values that correspond to what is below the column name.
 
 Once you have made your CSV file, you need to drop it in the appropriate folders. For example, if you chose to make a CSV file for the vocab for NP-1 in Japanese, you would:
-1. Navigate to the root directory
+1. Navigate to the root directory and then go into the `content` directory, this is where all content is stored for making the images
 2. Go to the `languages` directory (if you were doing something completely new like music, you'd create a new folder here as it is a new topic)
 3. Create a `japanese` directory in the `languages` directory if there is not already one (this represents the subtopic). Here, you _could_ make the csv file (naming it the same way as the subdirectory, i.e. `japanese.csv`, but since NP-1 is a specific part of the `japanese` course, I'd recommend making a `level` and dropping it there)
 4. Create a directory (optional, see above) named `NP-1` which represents the level. Drop the csv file there and name it `np-1.csv` (must be lowercase and same name as directory it is in)
@@ -124,8 +124,8 @@ Once you have your images set up, all you need to do is set them to cycle as you
 Navigate to your `System Preferences -> Desktop & Screen Saver -> Desktop` and click the + button at the bottom left to add an images folder (your images folder in the root directory of this program). Set `change picture` to True, adjust your cycling time, and choose whether or not to enable random order.
 
 **Please note**: it may take a few minutes after the images have finished being downloaded for them all to show up on your wallpaper as it takes time for the Mac system to read them.
-![Mac Example](/content/mac.png)
+![Mac Example](/screenshots/mac.png)
 
 #### Windows
 Similar procedure to Mac.
-![Windows Example](/content/windows.png)
+![Windows Example](/screenshots/windows.png)

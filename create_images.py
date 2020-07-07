@@ -23,7 +23,7 @@ def form_images(topic, subtopic, level=None):
     # search for csv file in level
     try:
         # find default image for wallpaper background
-        listing = os.listdir(f"{topic}/{subtopic}")
+        listing = os.listdir(f"content/{topic}/{subtopic}")
 
         for i in range(len(listing)):
             if (
@@ -36,20 +36,20 @@ def form_images(topic, subtopic, level=None):
 
         # search for it in topic and subtopic
         try:
-            default = Image.open(f"{topic}/{subtopic}/{default_image}")
+            default = Image.open(f"content/{topic}/{subtopic}/{default_image}")
             width, height = default.size  # get dimensions for centering text
         except:
-            default = Image.open(f"{topic}/{default_image}")
+            default = Image.open(f"content/{topic}/{default_image}")
             width, height = default.size  # get dimensions for centering text 
 
         # search for csv in topic and subtopic folders
         try:
-            with open(f"{topic}/{subtopic}/{level}/{level.lower()}.csv") as vocab:
+            with open(f"content/{topic}/{subtopic}/{level}/{level.lower()}.csv") as vocab:
                 reader = csv.reader(vocab)
                 for row in reader:
                     data.append(row)
         except:
-            with open(f"{topic}/{subtopic}/{subtopic.lower()}.csv") as vocab:
+            with open(f"content/{topic}/{subtopic}/{subtopic.lower()}.csv") as vocab:
                 reader = csv.reader(vocab)
                 for row in reader:
                     data.append(row)
@@ -57,7 +57,7 @@ def form_images(topic, subtopic, level=None):
     # if fail, search for default image in subtopic
     except:
         # find default image for wallpaper
-        listing = os.listdir(f"{topic}")
+        listing = os.listdir(f"content/{topic}")
 
         for i in range(len(listing)):
 
@@ -72,12 +72,12 @@ def form_images(topic, subtopic, level=None):
 
         # if successful, search for default iamge as well
         try:
-            with open(f"{topic}/{subtopic}/{level}/{level.lower()}.csv") as vocab:
+            with open(f"content/{topic}/{subtopic}/{level}/{level.lower()}.csv") as vocab:
                 reader = csv.reader(vocab)
                 for row in reader:
                     data.append(row)
         except:
-            with open(f"{topic}/{subtopic}/{subtopic.lower()}.csv") as vocab:
+            with open(f"content/{topic}/{subtopic}/{subtopic.lower()}.csv") as vocab:
                 reader = csv.reader(vocab)
                 for row in reader:
                     data.append(row)
@@ -119,10 +119,10 @@ def form_images(topic, subtopic, level=None):
         # create images for vocabulary
         try:
             default = Image.open(
-                f"{topic}/{subtopic}/{default_image}"
+                f"content/{topic}/{subtopic}/{default_image}"
             )  # reopen each time to prevent text from spilling over
         except:
-            default = Image.open(f"{topic}/{default_image}")
+            default = Image.open(f"content/{topic}/{default_image}")
 
         width, height = default.size  # get dimensions for centering text
         draw = ImageDraw.Draw(default)
