@@ -1,25 +1,27 @@
 # wallpaper-learn
 
-With `wallpaper-learn`, you can effortlessly learn new phrases, countries, or really anything you want... straight from your wallpaper.
+With `wallpaper-learn`, you can effortlessly learn new phrases, countries and capitals, or really anything you want... straight from your wallpaper!
 
-Curated phrases and educational material are available for a wide range of subjects and languages, and all you have to do is create a new folder and click a few buttons in settings before being able to have an educational background for your device.
+Curated phrases and educational material are available for a wide range of subjects and languages, and all you have to do is create a new folder and type one command before being able to have a cycling, ever-changing computer wallpaper to learn from.
 
 ## Topics
 
 This is a list of all of the topics, subtopics, and levels available to set as your wallpaper. If you see something missing here, just add your own, contributing takes only a few minutes!
 
+This also serves as a place to view possible commands without having to explore the file tree, which is why the names may sound a bit weird. However, their purpose is detailed in italic to the right.
+
 ### languages
 
 -   chinese
-    - HSK-1
+    - HSK-1 *(words required for HSK-1 level, in pinyin and hanyu characters, with a translation and category)*
 -   spanish
-    - top100
+    - top100 *(top 100 most used spanish words, their translation, and part of speech)*
 
 
 ### geography
 
--   countries
--   states
+-   countries *(all countries and territories of the world with capitals)*
+-   states *(all 50 states of the USA with capitals and location)*
 
 ... and many more to come! It's very simple to contribute by opening a PR with your files, and a few minutes of finding and parsing the right URL could help more people than you may expect.
 
@@ -64,7 +66,7 @@ Please, if you would like to contribute, know that you are more than welcome to.
 
 Contributing to this repository is simple. All you have to do is create a CSV file with the appropriate columns in the appropriate format, and [open a pull request](https://opensource.com/article/19/7/create-pull-request-github), open an issue if you're having trouble with making one, or [shoot me an email](mailto:simon@simonilincev.com) if you are _really_ having trouble.
 
-You can also contribute by finding a background image for various topics. These images should be named `default.jpg` or `default.png` and have dimensions of roughly 1920 x 1280 pixels.
+You can also contribute by finding a background image for various topics. These images should be named `default.jpg` or `default.png` and have dimensions of roughly 1920 x 1280 pixels. Likewise, you can help by adding custom fonts, more instructions are available at the README.md for that folder [here](/fonts/README.md).
 
 ### CSV Formatting
 
