@@ -7,7 +7,7 @@ With `wallpaper-learn`, you can effortlessly learn new phrases, countries and ca
 Curated phrases and educational material are available for a wide range of subjects and languages, and all you have to do is create a new folder and type one command before being able to have a cycling, ever-changing computer wallpaper to learn from.
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/display.gif?raw=true">
+  <img src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/display.gif?raw=true">
 </p>
 
 ## Topics
@@ -133,11 +133,11 @@ Navigate to your `System Preferences -> Desktop & Screen Saver -> Desktop` and c
 
 **Please note**: it may take a few minutes after the images have finished being downloaded for them all to show up on your wallpaper as it takes time for the Mac system to read them.
 <p align="center">
-  <img width="600" height="505" src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/mac.png?raw=true">
+  <img src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/mac.png?raw=true">
 </p>
 
 #### Windows
 Similar procedure to Mac.
 <p align="center">
-  <img width="600" height="450" src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/windows.png?raw=true">
+  <img src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/windows.png?raw=true">
 </p>
