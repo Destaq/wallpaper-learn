@@ -64,7 +64,7 @@ Please, if you would like to contribute, know that you are more than welcome to.
 
 Contributing to this repository is simple. All you have to do is create a CSV file with the appropriate columns in the appropriate format, and [open a pull request](https://opensource.com/article/19/7/create-pull-request-github), open an issue if you're having trouble with making one, or [shoot me an email](mailto:simon@simonilincev.com) if you are _really_ having trouble.
 
-You can also contribute by finding a background image for various topics.
+You can also contribute by finding a background image for various topics. These images should be named `default.jpg` or `default.png` and have dimensions of roughly 1920 x 1280 pixels.
 
 ### CSV Formatting
 
@@ -123,7 +123,7 @@ Once you have your images set up, all you need to do is set them to cycle as you
 #### Mac
 Navigate to your `System Preferences -> Desktop & Screen Saver -> Desktop` and click the + button at the bottom left to add an images folder (your images folder in the root directory of this program). Set `change picture` to True, adjust your cycling time, and choose whether or not to enable random order.
 
-**Please note**: sometimes the Mac system may fail to register all the images in your directory after you have run the command. If so, go back to the settings, select one image in the `images` folder, click it, and then click back out and check randomized cycling images. That should fix it.
+**Please note**: it may take a few minutes after the images have finished being downloaded for them all to show up on your wallpaper as it takes time for the Mac system to read them.
 ![Mac Example](/content/mac.png)
 
 #### Windows
