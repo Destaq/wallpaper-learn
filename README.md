@@ -1,5 +1,7 @@
 # wallpaper-learn
 
+> *Let your wallpaper become your teacher!*
+
 With `wallpaper-learn`, you can effortlessly learn new phrases, countries and capitals, or really anything you want... straight from your wallpaper!
 
 Curated phrases and educational material are available for a wide range of subjects and languages, and all you have to do is create a new folder and type one command before being able to have a cycling, ever-changing computer wallpaper to learn from.
