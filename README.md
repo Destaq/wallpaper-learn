@@ -6,6 +6,10 @@ With `wallpaper-learn`, you can effortlessly learn new phrases, countries and ca
 
 Curated phrases and educational material are available for a wide range of subjects and languages, and all you have to do is create a new folder and type one command before being able to have a cycling, ever-changing computer wallpaper to learn from.
 
+<p align="center">
+  <img src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/display.gif?raw=true">
+</p>
+
 ## Topics
 
 This is a list of all of the topics, subtopics, and levels available to set as your wallpaper. If you see something missing here, just add your own, contributing takes only a few minutes!
@@ -41,7 +45,7 @@ You can run this by running the command `python3 set_wallpaper.py` and any comma
 
 Likewise, you can also view possible arguments by running `python3 set_wallpaper.py --help` which will give you a detailed breakdown of how to use this program or by referring back to this guide.
 
-Once the command has finished running, all that you have to do is navigate to your settings/System Preferences and set up a cycling wallpaper background.
+Once the command has finished running, all that you have to do is navigate to your settings/System Preferences and [set up a cycling wallpaper background](#setting-cycling-wallpaper), which takes all of 30 seconds.
 
 *Simple Example: `python3 set_wallpaper.py -t languages -s chinese -l HSK-1`*
 
@@ -128,8 +132,12 @@ Once you have your images set up, all you need to do is set them to cycle as you
 Navigate to your `System Preferences -> Desktop & Screen Saver -> Desktop` and click the + button at the bottom left to add an images folder (your images folder in the root directory of this program). Set `change picture` to True, adjust your cycling time, and choose whether or not to enable random order.
 
 **Please note**: it may take a few minutes after the images have finished being downloaded for them all to show up on your wallpaper as it takes time for the Mac system to read them.
-![Mac Example](/screenshots/mac.png)
+<p align="center">
+  <img src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/mac.png?raw=true">
+</p>
 
 #### Windows
 Similar procedure to Mac.
-![Windows Example](/screenshots/windows.png)
+<p align="center">
+  <img src="https://github.com/Destaq/wallpaper-learn/blob/master/screenshots/windows.png?raw=true">
+</p>
