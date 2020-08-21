@@ -22,6 +22,9 @@ This also serves as a place to view possible commands without having to explore 
     - HSK-1 *(words required for HSK-1 level, in pinyin and hanyu characters, with a translation and category)*
 -   spanish
     - top100 *(top 100 most used spanish words, their translation, and part of speech)*
+-   arabic
+    - numbers *(ten Arabic numbers)*
+    - top90 *(top 90 most common Arabic words, with a translation and their category)*
 
 
 ### geography
